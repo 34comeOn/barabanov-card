@@ -1,7 +1,7 @@
 export default function ResumePage() {
     return(
-        <p>
+        <main>
             Resume
-        </p>
+        </main>
     )
 }
