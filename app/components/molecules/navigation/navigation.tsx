@@ -16,7 +16,7 @@ export default function Navigation() {
                         <Fragment key={id}>
                             {(id !== 1)?<div className="bar bg-slate-900 ml-3 mr-3"></div>: null}
                             <li >
-                                <Link href={path} className={`${(pathname === path)? 'text-amber-500 font-light': null} text-lg font-thin hover:text-amber-500 transition duration-300`}>
+                                <Link href={path} className={`text-lg hover:text-amber-500 transition duration-300 ${(pathname === path)? 'text-amber-500 font-light': ' font-thin'}`}>
                                     {title}
                                 </Link>
                             </li>

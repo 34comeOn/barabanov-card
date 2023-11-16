@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import Footer from './components/organizms/footer/footer'
 import Header from './components/organizms/header/header'
 import './globals.css'
@@ -16,11 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='min-h-screen flex flex-col items-center justify-between p-4 sm:px-10 lg:px-14'>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+        <body className='min-h-screen flex flex-col items-center justify-between p-4 sm:px-10 lg:px-14'>
+          <Header />
+            {children}
+          <Footer />
+        </body>
     </html>
   )
 }

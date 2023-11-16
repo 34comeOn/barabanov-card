@@ -1,6 +1,8 @@
 import { navigationItems } from "@/app/constants/constants";
 import Link from "next/link";
 import './style.css'
+import {motion as m} from 'framer-motion'
+import { container, item } from "@/app/animation";
 
 export default function Introduce() {
     return(
@@ -10,19 +12,24 @@ export default function Introduce() {
             <p className="text-xl font-thin mt-5">
                 I`m a web developer I`m a web developer I`m a web developerI`m a web developerI`m a web developerI`m a web deveI`m a web developer
             </p>
-            <ul className="flex flex-row flex-start items-center mt-5 w">
+            <m.ul 
+            variants={container} 
+            initial='hidden' 
+            animate='show' 
+            className="flex flex-row flex-start items-center mt-5 w">
                 {navigationItems && navigationItems.map(({id, title, path, color})=>{
                     return (
-                        <li key={id} >
+                        <m.li variants={item} key={id} >
                             <Link href={path} className='text-lg font-normal'>
-                                <div className={`w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 block ${color} flex items-center justify-center rounded-full mr-4 border border-black hover:bg-transparent transition duration-500`}>
+                                <div 
+                                    className={`w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 block ${color} flex items-center justify-center rounded-full mr-4 border border-black hover:bg-transparent transition duration-500`}>
                                     {title}
                                 </div>
                             </Link>
-                        </li>
+                        </m.li>
                     )
                 })}
-            </ul>
+            </m.ul>
         </div>
     )
 }
