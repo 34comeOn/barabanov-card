@@ -5,7 +5,7 @@ import Bar from "../../atoms/bar/bar"
 const skillsData = [
     {
         category: 'main',
-        technologies: ['JS ES6', 'React', 'TypeScript', 'Redux']
+        technologies: ['JS ES6', 'React', 'TS','NextJS', 'Redux']
     },
     {
         category: 'server technologies',
