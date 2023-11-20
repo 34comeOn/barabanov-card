@@ -8,13 +8,13 @@ import './style.css'
 const experienceData = [
     {
         period: '2022-2023',
-        position: 'Developer', 
-        company: 'Aston', 
+        position: 'middle React Developer', 
+        company: 'Andersen', 
         description: 'I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot'
     },
     {
         period: '2020-2022',
-        position: 'Developer', 
+        position: 'junior Web Developer', 
         company: 'Gazprom-Neft', 
         description: 'I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot'
     },

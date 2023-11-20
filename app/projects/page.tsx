@@ -1,7 +1,6 @@
 'use client'
 import {motion as m} from 'framer-motion'
 import ProjectSection from '../components/molecules/projectSection/projectSection'
-import ResumeSection from '../components/molecules/resumeSection/resumeSection'
 import './style.css'
 
 export default function Projects() {

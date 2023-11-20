@@ -21,7 +21,11 @@ const skillsData = [
     },
     {
         category: 'libraries',
-        technologies: ['AntDesign', 'Material UI', 'Tailwind']
+        technologies: ['AntDesign', 'Material UI', 'Tailwind',]
+    },
+    {
+        category: 'testing libraries',
+        technologies: ['Jest', 'React Testing Library']
     },
 ]
 
