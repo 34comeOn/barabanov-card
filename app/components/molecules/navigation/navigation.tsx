@@ -2,21 +2,8 @@
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import './style.css'
-
-const navigationItems = [
-    {
-        title: 'Resume',
-        path: '/resume'
-    },
-    {
-        title: 'Projects',
-        path: '/projects'
-    },
-    {
-        title: 'About me',
-        path: '/about_me'
-    },
-]
+import { navigationItems } from "@/app/constants/constants";
+import { Fragment } from "react";
 
 export default function Navigation() {
     const pathname = usePathname();
@@ -24,17 +11,16 @@ export default function Navigation() {
     return(
         <nav>
             <ul className="flex flex-row flex-start items-center">
-                {navigationItems && navigationItems.map(({title, path}, index)=>{
+                {navigationItems && navigationItems.map(({id, title, path})=>{
                     return (
-                        <>
-                        {(index !== 0)?<div className="bar bg-slate-900 ml-3 mr-3"></div>: null}
-                        <li key={index}>
-                            <Link href={path} className={`${(pathname === path)? 'text-amber-500': null} text-lg font-thin hover:text-amber-500`}>
-                            {/* <Link href={path} className={(pathname)'text-lg font-thin hover:text-amber-500'}> */}
-                                {title}
-                            </Link>
-                        </li>
-                        </>
+                        <Fragment key={id}>
+                            {(id !== 1)?<div className="bar bg-slate-900 ml-3 mr-3"></div>: null}
+                            <li >
+                                <Link href={path} className={`text-lg hover:text-amber-500 transition duration-300 ${(pathname === path)? 'text-amber-500 font-light': ' font-thin'}`}>
+                                    {title}
+                                </Link>
+                            </li>
+                        </Fragment>
                     )
                 })}
             </ul>
