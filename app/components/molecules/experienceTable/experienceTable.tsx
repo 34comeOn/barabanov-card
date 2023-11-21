@@ -1,19 +1,21 @@
+import Expander from '../expander/expander'
 import './style.css'
 
 type TexperienceTable = {
     period: string,
     position: string, 
     company: string, 
-    description: string
+    description: string,
+    shouldUseExpander: boolean,
 }
 
 export default function ExperienceTable( {experienceInfo}: {experienceInfo:TexperienceTable[]}) {
     return(
         <ul>
-            {experienceInfo.map(({period,position,company,description},index)=> {
+            {experienceInfo.map(({period,position,company,description,shouldUseExpander},index)=> {
                 return(
                     <li key={index} className='flex flex-row gap-4 mb-12'>
-                        <span className='font-thin mt-1'>{period}</span>
+                        <span style={{minWidth: '130px', textAlign: 'right'}} className='font-thin mt-1'>{period}</span>
                         <div className='experience__block'>
                             <h4 className='font-semibold text-xl'>
                                 {position}
@@ -21,9 +23,12 @@ export default function ExperienceTable( {experienceInfo}: {experienceInfo:Texpe
                             <span className='font-light text-xl'>
                                 {company}
                             </span>
-                            <p className="font-thin">
-                                {description}
-                            </p>
+
+                            <Expander height="50px" isNecessaryToUse={shouldUseExpander}>
+                                <p className="font-thin">
+                                    {description}
+                                </p>
+                            </Expander>
                         </div>
                     </li>
 

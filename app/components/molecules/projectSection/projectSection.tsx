@@ -2,28 +2,41 @@ import { Fragment} from "react";
 import Image from 'next/image'
 import './style.css'
 import { DeploymentUnitOutlined, LinkOutlined, ReadOutlined } from "@ant-design/icons";
+import Expander from "../expander/expander";
 
 const projectData = [
     {
         title: 'Memorizer',
-        technics: 'React, TypeScript, Redux, SASS, Styled Components, Material UI, Ant Design, NodeJs, Express, Mongo DB and more...',
-        description: 'It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text',
+        technics: 'React, TypeScript, Redux, SASS, Styled Components, Material UI, Ant Design, NodeJs, Express, Mongo DB, Jest and more...',
+        description: `Memorizer - это веб проложение, предназначенное для запоминания, структурирования 
+        и удобного доступа к персональным материалам, создаваемых пользователем. 
+        Архитектура, клиентская часть, серверная часть, подключение и взаимодействие 
+        с базой данных, деплой приложения целиком выполнены мной. Архитектура приложения выстроена исходя 
+        из краеугольных принципов: программа должна легко поддаваться изменению; сложность измения должна быть пропорциональна 
+        масштабу изменения, но никак не его форме; деление программного обеспечения на уровни и построение архитектурных границ. 
+        Основными задачами разработки являлись: создание легко читаемого, 
+         удобного в переиспользовании и в сопровождении кода; масштабируемость, а также независимость разработки 
+         слоев и компонентов приложения.`,
         href: 'http://memorizer-app.com',
         imgPath: '/memorizer.jpg',
+        shouldUseExpander: true,
     },
     {
         title: 'Personal card',
         technics: 'NextJS, TypeScript, Ant Design, Tailwind, Framer Motion',
-        description: ' great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text It is great a lot of text',
+        description: `Проект "Визитная карточка" был разработан мной с использованием современной технологии Server Site Rendering, популярных библиотек и атуальных 
+        инструментов разработчика. Сайт был создан с применением отзывчивого дизайна, оптимизации загрузки страниц, улучшением 
+        показателей SEO по современным стандартам разработки.`,
         href: 'https://test.com',
         imgPath: '/card.jpg',
+        shouldUseExpander: false,
     },
 ]
 
 export default function ProjectSection() {
     return(
         <div className="mb-10">
-            {projectData.map(({title,technics, description, href, imgPath}, index)=> {
+            {projectData.map(({title,technics, description, href, imgPath, shouldUseExpander}, index)=> {
                 return(
                     <div key={index} className="flex flex-row justify-between project-section mt-14 w-full text-left">
                         <div className="flex flex-col project-section__info">
@@ -39,7 +52,9 @@ export default function ProjectSection() {
                             </div>
                             <div className="flex flex-row items-center mt-4">
                                 <ReadOutlined style={{marginRight: '10px', fontSize: '28px', marginBottom: 'auto', marginTop: '5px'}}/>
-                                <p className="font-light"> {description}</p>
+                                <Expander height="309px" isNecessaryToUse={shouldUseExpander}>
+                                    <p className="font-light"> {description}</p>
+                                </Expander>
                             </div>
                         </div>
                         <div>

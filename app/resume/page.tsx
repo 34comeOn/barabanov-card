@@ -7,22 +7,56 @@ import './style.css'
 
 const experienceData = [
     {
+        period: '2023-currently',
+        position: 'Full Stack Developer', 
+        company: 'Freelance', 
+        description: `Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        `,
+        shouldUseExpander: true
+    },
+    {
         period: '2022-2023',
-        position: 'middle React Developer', 
+        position: 'Middle React Developer', 
         company: 'Andersen', 
-        description: 'I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot'
+        description: `Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        `,
+        shouldUseExpander: true
     },
     {
         period: '2020-2022',
-        position: 'junior Web Developer', 
+        position: 'Junior Web Developer', 
         company: 'Gazprom-Neft', 
-        description: 'I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot'
+        description: `Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        `,
+        shouldUseExpander: true
     },
     {
         period: '2016-2020',
         position: 'Engineer', 
         company: 'Kvartal', 
-        description: 'I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot I`ve done a lot'
+        description: `Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        Ive done a Ive done a  Ive done a  Ive done a 
+        `,
+        shouldUseExpander: true
     },
 ]
 
@@ -31,19 +65,22 @@ const educationData = [
         period: '2018-2020',
         position: '', 
         company: 'HTML-Academy', 
-        description: 'Web development online courses'
+        description: 'Web development online courses',
+        shouldUseExpander: false,
     },
     {
         period: '2012-2013',
         position: '', 
         company: 'Saint-Petersburg Politechnic University', 
-        description: 'Engineer in construction technologies'
+        description: 'Engineer in construction technologies',
+        shouldUseExpander: false,
     },
     {
         period: '2005-2010',
         position: '', 
         company: 'Saint-Petersburg Politechnic University', 
-        description: 'Engineer in metal processing technologies'
+        description: 'Engineer in metal processing technologies',
+        shouldUseExpander: false,
     },
 ]
 
