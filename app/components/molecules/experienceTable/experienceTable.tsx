@@ -1,5 +1,4 @@
 import Expander from '../expander/expander'
-import './style.css'
 
 type TexperienceTable = {
     period: string,
@@ -14,9 +13,9 @@ export default function ExperienceTable( {experienceInfo}: {experienceInfo:Texpe
         <ul>
             {experienceInfo.map(({period,position,company,description,shouldUseExpander},index)=> {
                 return(
-                    <li key={index} className='flex flex-row gap-4 mb-12'>
-                        <span style={{minWidth: '130px', textAlign: 'right'}} className='font-thin mt-1'>{period}</span>
-                        <div className='experience__block'>
+                    <li key={index} className='flex flex-col md:flex-row gap-0 md:gap-4 mb-12'>
+                        <span className='min-w-[130px] text-left md:text-right font-thin mt-1'>{period}</span>
+                        <div className='max-w-[440px] w-full md:w-[340px] mt-[2px] text-left'>
                             <h4 className='font-semibold text-xl'>
                                 {position}
                             </h4>

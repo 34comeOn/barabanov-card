@@ -31,13 +31,13 @@ const skillsData = [
 
 export default function SkillsList() {
     return(
-        <ul className="mb-10">
+        <ul className="mb-10 w-[250px] ml-[20px] xs:w-[315px] md:w-[370px] xs:ml-[20px] md:ml-0">
             {skillsData && skillsData.map(({category,technologies},index)=> {
                 return(
                     <Fragment key={index}>
                         {(index !== 0)? <Bar />: null}
-                        <li className="text-left text-xl leading-10 font-light flex items-center">
-                        <CheckOutlined style={{marginLeft: '-40px', marginRight: '20px',marginTop: '3px'}}/>
+                        <li className="text-left text-[12px] xs:text-[16px] h-[40px] items-baseline md:text-xl leading-10 font-light flex md:items-center">
+                            <CheckOutlined className="text-[16px] md:text-[20px] block md:mt-[3px] ml-[-20px] mr-[5px] md:ml-[-35px] md:mr-[15px]"/>
                         {technologies && technologies.join(', ')}
                         </li>
                     </Fragment>

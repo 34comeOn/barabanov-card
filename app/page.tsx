@@ -13,7 +13,8 @@ export default function Home() {
       className='h-max max-w-[380px] sm:max-w-[100%] flex flex-col-reverse sm:flex-row items-center'>
       <div className='sm:mt-[50px] m-0 sm:mr-4 sm:mb-auto md:max-w-[280px] lg:max-w-[100%] lg:m-0 mb-6'>
         <Image
-          priority={true}
+          unoptimized
+          priority={false}
           src="/mikhail.jpg"
           width={450}
           height={450}

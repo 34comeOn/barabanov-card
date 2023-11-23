@@ -3,7 +3,6 @@ import { Fragment, useState } from "react";
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { navigationItems } from "@/app/constants/constants";
-import './style.css'
 import { CloseOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
 export default function Navigation() {
@@ -16,7 +15,7 @@ export default function Navigation() {
                 {navigationItems && navigationItems.map(({id, title, path})=>{
                     return (
                         <Fragment key={id}>
-                            {(id !== 1)?<div className="bar bg-slate-900 ml-3 mr-3"></div>: null}
+                            {(id !== 1)?<div className="w-[1px] h-[18px] bg-slate-900 ml-3 mr-3"></div>: null}
                             <li >
                                 <Link href={path} className={`text-lg hover:text-amber-500 transition duration-300 ${(pathname === path)? 'text-amber-500 font-light': ' font-thin'}`}>
                                     {title}

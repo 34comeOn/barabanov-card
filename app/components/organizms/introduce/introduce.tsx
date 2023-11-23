@@ -6,7 +6,7 @@ import { container, item } from "@/app/animation";
 export default function Introduce() {
     return(
         <div className="flex flex-col lg:ml-12 md:max-w-[430px] w-full m-auto sm:mb-10 lg:w-96 mb-3">
-            <h1 className="block text-4xl lg:text-8xl mt-14 font-semibold lg:font-bold lg:ml-[-4px] greeting">Hello</h1>
+            <h1 className="block text-4xl lg:text-8xl mt-14 font-semibold lg:font-bold lg:ml-[-4px]">Hello</h1>
             <h3 className="text-xl font-semibold lg:text-3xl mt-4 lg:mt-10">A Bit About Me</h3>
             <p className="text-xl font-thin mt-1 lg:mt-5">
                 I`m a web developer with over a 3 years of hands-on experience, family guy and just a happy person.
