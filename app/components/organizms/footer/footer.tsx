@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className='w-full'>
             <Bar />
             <div>
-                <ul className='flex flex-row justify-between items-center'>
+                <ul className='flex flex-col md:flex-row justify-between items-start md:items-center'>
                     <li className='flex flex-col'>
                         <strong className='mt-9 mb-2 text-lg'>Phone</strong>
                         <a href="tel:+79111614831" className='mb-2 font-light'>+7 911 1614831</a>

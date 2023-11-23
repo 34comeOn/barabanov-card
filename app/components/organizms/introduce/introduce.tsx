@@ -6,7 +6,7 @@ import { container, item } from "@/app/animation";
 
 export default function Introduce() {
     return(
-        <div className="flex flex-col ml-10 w-96">
+        <div className="flex flex-col lg:ml-10 w-full m-auto lg:w-96">
             <h1 className="text-8xl mt-10 font-bold greeting">Hello</h1>
             <h3 className="text-3xl mt-10">A Bit About Me</h3>
             <p className="text-xl font-thin mt-5">

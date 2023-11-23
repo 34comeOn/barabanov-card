@@ -10,9 +10,10 @@ export default function Home() {
       initial={{opacity: 0 }}
       animate={{opacity: 1 }}
       transition={{duration:0.85, ease: 'easeOut'}}
-      className='h-max flex flex-row items-center'>
-      <div>
+      className='h-max flex flex-col-reverse sm:flex-row items-center'>
+      <div className='m-4 sm:m-0'>
         <Image
+          priority={true}
           src="/mikhail.jpg"
           width={500}
           height={500}
