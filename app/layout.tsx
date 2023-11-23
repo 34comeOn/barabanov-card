@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <body className='min-h-screen flex flex-col items-center justify-between p-4 sm:px-10 lg:px-14'>
+        <body className='min-h-screen flex flex-col items-center justify-between p-5 sm:px-10 lg:px-14'>
           <Header />
             {children}
           <Footer />
