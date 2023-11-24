@@ -20,6 +20,7 @@ const projectData = [
         href: 'http://memorizer-app.com',
         imgPath: '/memorizer.jpg',
         shouldUseExpander: true,
+        alt: 'Memorizer screen shot',
     },
     {
         title: 'Personal card',
@@ -30,15 +31,16 @@ const projectData = [
         href: 'https://test.com',
         imgPath: '/card.jpg',
         shouldUseExpander: false,
+        alt: 'card site screen shot',
     },
 ]
 
 export default function ProjectSection() {
     return(
         <div className="mb-10">
-            {projectData.map(({title,technics, description, href, imgPath, shouldUseExpander}, index)=> {
+            {projectData.map(({title,technics, description, href, imgPath, shouldUseExpander, alt}, index)=> {
                 return(
-                    <div key={index} className="flex flex-row justify-between project-section mt-14 w-full text-left">
+                    <div key={index} className="flex flex-col md:flex-row justify-between project-section mt-14 w-full text-left">
                         <div className="flex flex-col project-section__info">
                             <h3 className="project-section__title">{title}</h3>
                             {href && <div className="flex flex-row items-center mt-4 mb-4">
@@ -52,18 +54,20 @@ export default function ProjectSection() {
                             </div>
                             <div className="flex flex-row items-center mt-4">
                                 <ReadOutlined style={{marginRight: '10px', fontSize: '28px', marginBottom: 'auto', marginTop: '5px'}}/>
-                                <Expander height="309px" isNecessaryToUse={shouldUseExpander}>
-                                    <p className="font-light"> {description}</p>
+                                <Expander height="250px" isNecessaryToUse={shouldUseExpander}>
+                                    <p className="font-light mt-[3px]"> {description}</p>
                                 </Expander>
                             </div>
                         </div>
-                        <div>
+                        <div className="ml-[auto] mr-[auto] xs:ml-[36px] md:ml-[16px] mt-[30px] md:mt-[54px]">
                             <Image
+                            unoptimized
+                            priority={true}
                             src={imgPath}
                             width={350}
                             height={200}
-                            alt="Memorizer application"
-                            className='relative'
+                            alt={alt}
+                            className='relative shadow-[3px_7px_9px_-2px_rgba(0,0,0,0.4)]'
                             />
                         </div>
                     </div>

@@ -14,7 +14,7 @@ export default function Home() {
       <div className='sm:mt-[50px] m-0 sm:mr-4 sm:mb-auto md:max-w-[280px] lg:max-w-[100%] lg:m-0 mb-6'>
         <Image
           unoptimized
-          priority={false}
+          priority={true}
           src="/mikhail.jpg"
           width={450}
           height={450}

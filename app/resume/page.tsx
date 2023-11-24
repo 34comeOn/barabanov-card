@@ -1,6 +1,7 @@
 'use client'
 import {motion as m} from 'framer-motion'
 import ExperienceTable from '../components/molecules/experienceTable/experienceTable'
+import Languages from '../components/molecules/languages/languages'
 import ResumeSection from '../components/molecules/resumeSection/resumeSection'
 import SkillsList from '../components/molecules/skillsList/skillsList'
 
@@ -96,6 +97,10 @@ const resumeData = [
         title: 'Skills',
         info: <SkillsList />,
     },
+    {
+        title: 'Languages',
+        info: <Languages />,
+    },
 ]
 
 export default function ResumePage() {
@@ -106,7 +111,7 @@ export default function ResumePage() {
         transition={{duration:0.75}}
         className='h-max w-full mb-auto flex flex-row items-center'>
         <div className='w-full text-center'>
-            <h2 className="md:mt-20 font-semibold text-center tracking-[3px] mr-[650px] block text-4xl mt-14 lg:font-bold lg:ml-[-4px]">Resume</h2>
+            <h2 className="md:mt-20 font-semibold text-center tracking-[3px] mr-[650px] block text-4xl mt-14 lg:font-bold lg:ml-[-8px]">Resume</h2>
             <ResumeSection resumeData={resumeData}/>
         </div>
         </m.main>
