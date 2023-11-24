@@ -4,7 +4,7 @@ type TexperienceTable = {
     period: string,
     position: string, 
     company: string, 
-    description: string,
+    description: string[],
     shouldUseExpander: boolean,
 }
 
@@ -24,9 +24,13 @@ export default function ExperienceTable( {experienceInfo}: {experienceInfo:Texpe
                             </span>
 
                             <Expander height="50px" isNecessaryToUse={shouldUseExpander}>
-                                <p className="font-thin">
-                                    {description}
-                                </p>
+                                {description.map((item, index)=> {
+                                    return(
+                                        <p key={index} className="font-thin">
+                                        {item}
+                                    </p>
+                                    )
+                                })}
                             </Expander>
                         </div>
                     </li>

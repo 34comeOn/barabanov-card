@@ -10,52 +10,28 @@ const experienceData = [
         period: '2023-currently',
         position: 'Full Stack Developer', 
         company: 'Freelance', 
-        description: `Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        `,
+        description: ['- Developed my own web application "Memorizer";', '- Created my business card using new technologies;'],
         shouldUseExpander: true
     },
     {
         period: '2022-2023',
         position: 'Middle React Developer', 
-        company: 'Andersen', 
-        description: `Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        `,
+        company: 'Aston (ex Andersen)', 
+        description: [''],
         shouldUseExpander: true
     },
     {
         period: '2020-2022',
         position: 'Junior Web Developer', 
         company: 'Gazprom-Neft', 
-        description: `Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        `,
+        description: [''],
         shouldUseExpander: true
     },
     {
         period: '2016-2020',
         position: 'Engineer', 
         company: 'Kvartal', 
-        description: `Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        Ive done a Ive done a  Ive done a  Ive done a 
-        `,
+        description: [''],
         shouldUseExpander: true
     },
 ]
@@ -65,21 +41,21 @@ const educationData = [
         period: '2018-2020',
         position: '', 
         company: 'HTML-Academy', 
-        description: 'Web development online courses',
+        description: ['Web development online courses'],
         shouldUseExpander: false,
     },
     {
         period: '2012-2013',
         position: '', 
         company: 'Saint-Petersburg Politechnic University', 
-        description: 'Engineer in construction technologies',
+        description: ['Engineer in construction technologies'],
         shouldUseExpander: false,
     },
     {
         period: '2005-2010',
         position: '', 
         company: 'Saint-Petersburg Politechnic University', 
-        description: 'Engineer in metal processing technologies',
+        description: ['Engineer in metal processing technologies'],
         shouldUseExpander: false,
     },
 ]
