@@ -2,7 +2,6 @@
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import {motion as m} from 'framer-motion'
-import './style.css';
 
 type Texpander = {
     children: React.ReactNode,
@@ -23,8 +22,8 @@ export default function Expander({children, height, isNecessaryToUse}:Texpander)
             style={{marginBottom: '13px', overflow: 'hidden'}}>
                 {children}
             </m.div>
-            {isCollapse && isNecessaryToUse && <DownOutlined className="expander__button" onClick={()=> setHeight('max-content')}/>}
-            {!isCollapse && isNecessaryToUse && <UpOutlined className="expander__button"  onClick={()=> setHeight(height)}/>}
+            {isCollapse && isNecessaryToUse && <DownOutlined className="hover:text-[#D2992F]" onClick={()=> setHeight('max-content')}/>}
+            {!isCollapse && isNecessaryToUse && <UpOutlined className="hover:text-[#D2992F]"  onClick={()=> setHeight(height)}/>}
         </div>
     )
 }

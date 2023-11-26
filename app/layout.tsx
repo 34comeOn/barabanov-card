@@ -7,6 +7,21 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Barabanov-Dev',
   description: 'My personal card',
+  manifest: '/site.webmanifest',
+  icons: [
+    {url: '',
+    rel:'apple-touch-icon', 
+    sizes: '180x180', 
+    href: '/apple-touch-icon.png'},
+    {url: '',
+    rel:'icon', 
+    sizes: '32x32', 
+    href: '/favicon-32x32.png'},
+    {url: '',
+    rel:'icon', 
+    sizes: '16x16', 
+    href: '/favicon-16x16.png'},
+  ],
 }
 
 export default function RootLayout({
@@ -16,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <body className='min-h-screen flex flex-col items-center justify-between p-4 sm:px-10 lg:px-14'>
+        <body className='min-h-screen flex flex-col items-center justify-between p-5 sm:px-10 lg:px-14'>
           <Header />
             {children}
           <Footer />

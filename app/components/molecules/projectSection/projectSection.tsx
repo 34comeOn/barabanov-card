@@ -8,37 +8,37 @@ const projectData = [
     {
         title: 'Memorizer',
         technics: 'React, TypeScript, Redux, SASS, Styled Components, Material UI, Ant Design, NodeJs, Express, Mongo DB, Jest and more...',
-        description: `Memorizer - это веб проложение, предназначенное для запоминания, структурирования 
-        и удобного доступа к персональным материалам, создаваемых пользователем. 
-        Архитектура, клиентская часть, серверная часть, подключение и взаимодействие 
-        с базой данных, деплой приложения целиком выполнены мной. Архитектура приложения выстроена исходя 
-        из краеугольных принципов: программа должна легко поддаваться изменению; сложность измения должна быть пропорциональна 
-        масштабу изменения, но никак не его форме; деление программного обеспечения на уровни и построение архитектурных границ. 
-        Основными задачами разработки являлись: создание легко читаемого, 
-         удобного в переиспользовании и в сопровождении кода; масштабируемость, а также независимость разработки 
-         слоев и компонентов приложения.`,
+        description: `
+        Memorizer - is a web application designed to remember, track, organize and have easily access for personal materials, created by the user. 
+        The app architecture, client and server parts, the connection and interaction with the database, app deployment are all tasks that I have completed.
+        The architecture is based on the fundamental principles: the program should be easy to modify; the complexity of change should be proportional
+         to the scale of the change, but not to its form; the division of software into levels and the construction of architectural boundaries.
+         The main tasks of development were: creation of easy-to-read, easy-to-use and easy-maintenance code; scalability, and independence of development of layers and components of the application.`,
         href: 'http://memorizer-app.com',
         imgPath: '/memorizer.jpg',
         shouldUseExpander: true,
+        alt: 'Memorizer screen shot',
     },
     {
         title: 'Personal card',
         technics: 'NextJS, TypeScript, Ant Design, Tailwind, Framer Motion',
-        description: `Проект "Визитная карточка" был разработан мной с использованием современной технологии Server Site Rendering, популярных библиотек и атуальных 
-        инструментов разработчика. Сайт был создан с применением отзывчивого дизайна, оптимизации загрузки страниц, улучшением 
-        показателей SEO по современным стандартам разработки.`,
+        description: `
+        The project "Personal Card" was developed by me using the modern technology of Server Site Rendering, popular libraries and 
+        contemporary tools of developer. The site was created using responsive design, optimization of page loading, improvement of SEO 
+        indicators by modern development standards.`,
         href: 'https://test.com',
         imgPath: '/card.jpg',
         shouldUseExpander: false,
+        alt: 'card site screen shot',
     },
 ]
 
 export default function ProjectSection() {
     return(
         <div className="mb-10">
-            {projectData.map(({title,technics, description, href, imgPath, shouldUseExpander}, index)=> {
+            {projectData.map(({title,technics, description, href, imgPath, shouldUseExpander, alt}, index)=> {
                 return(
-                    <div key={index} className="flex flex-row justify-between project-section mt-14 w-full text-left">
+                    <div key={index} className="flex flex-col md:flex-row justify-between project-section mt-14 w-full text-left">
                         <div className="flex flex-col project-section__info">
                             <h3 className="project-section__title">{title}</h3>
                             {href && <div className="flex flex-row items-center mt-4 mb-4">
@@ -52,18 +52,20 @@ export default function ProjectSection() {
                             </div>
                             <div className="flex flex-row items-center mt-4">
                                 <ReadOutlined style={{marginRight: '10px', fontSize: '28px', marginBottom: 'auto', marginTop: '5px'}}/>
-                                <Expander height="309px" isNecessaryToUse={shouldUseExpander}>
-                                    <p className="font-light"> {description}</p>
+                                <Expander height="247px" isNecessaryToUse={shouldUseExpander}>
+                                    <p className="font-light mt-[3px]"> {description}</p>
                                 </Expander>
                             </div>
                         </div>
-                        <div>
+                        <div className="ml-[auto] mr-[auto] xs:ml-[36px] md:ml-[16px] mt-[30px] md:mt-[54px]">
                             <Image
+                            unoptimized
+                            priority={true}
                             src={imgPath}
                             width={350}
                             height={200}
-                            alt="Memorizer application"
-                            className='relative'
+                            alt={alt}
+                            className='relative shadow-[3px_7px_9px_-2px_rgba(0,0,0,0.4)]'
                             />
                         </div>
                     </div>
