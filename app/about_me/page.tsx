@@ -31,7 +31,7 @@ export default function AboutMe() {
             </ul>
             <MoreOutlined rotate={90} className='text-[32px] mt-16'/>
             <div className='mt-0 mb-8'>
-                <Carousel effect="fade" autoplay={true} autoplaySpeed={4500} speed={400} dots={false}>
+                <Carousel effect="fade" autoplay={true} autoplaySpeed={4700} speed={400} dots={false}>
                     <div>
                     <p style={contentStyle} className='text-lg xs:text-xl md:text-2xl'>&quot;If code appears to be identical but develops in different ways, at different speeds, and for different reasons - it is not true duplication.&quot;</p>
                     </div>
