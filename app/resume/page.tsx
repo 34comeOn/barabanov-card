@@ -32,7 +32,7 @@ const experienceData = [
             '- Configuring CORS, data caching;',
             '- and etc..',
             'Cloud server deployment, domain connection',
-            '--------------------------------------', 
+            '********************************', 
             '2) Current SSR project "Personal Card"', 
             'Stack:',
             'NextJS, TypeScript, Ant Design, Tailwind, Framer Motion',
