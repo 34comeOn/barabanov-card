@@ -43,7 +43,7 @@ export default function Navigation() {
                 isHidden
                     ? `md:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center
                     w-full h-screen  md:bg-transparent text-center ease-in duration-300 z-10`
-                    : `md:hidden absolute top-[-100%] left-0 right-0 bottom-0 flex justify-center items-center
+                    : `md:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center
                     w-full h-screen  md:bg-transparent text-center ease-in duration-300 z-10`
                 }
             >
