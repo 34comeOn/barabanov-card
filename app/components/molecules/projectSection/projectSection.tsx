@@ -15,7 +15,7 @@ const projectData = [
             to the scale of the change, but not to its form; the division of software into levels and the construction of architectural boundaries.`,
             `The main tasks of development were: creation of easy-to-read, easy-to-use and easy-maintenance code; scalability, and independence of development of layers and components of the application.`
         ],
-        href: 'http://memorizer-app.com',
+        href: 'https://memorizer-34comeons-projects.vercel.app/',
         imgPath: '/memorizer.jpg',
         shouldUseExpander: true,
         alt: 'Memorizer screen shot',
